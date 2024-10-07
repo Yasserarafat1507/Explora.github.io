@@ -1,0 +1,28 @@
+name: dicoding
+description: "A new Flutter project."
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10+1
+  curved_navigation_bar: ^1.0.6
+  shared_preferences: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/img/
+
+  fonts:
+    - family: hiatus_2
+      fonts:
+        - asset: assets/fonts/hiatus_2 2/Hiatus.ttf
