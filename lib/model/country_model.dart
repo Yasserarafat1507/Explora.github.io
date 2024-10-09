@@ -4,6 +4,7 @@ class PopularModel {
   String imgPlus;
   String reting;
   List <String> imgSrc;
+  bool isFavorited;
 
 
   PopularModel({
@@ -12,6 +13,7 @@ class PopularModel {
     required this.imgPlus,
     required this.reting,
     required this.imgSrc,
+    this.isFavorited = false,
   });
 }
 
@@ -23,7 +25,7 @@ var CountryM= [
     imgPlus: 'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/indizone/2021/06/24/mnsvzlZ/mengenal-vatikan-negara-terkecil-di-dunia-yang-ada-di-italia88.jpg',
     imgSrc: [
       'https://prod1-api.goldenrama.com/uploads/Colosseum_di_Roma_dee739c181.jpg',
-      'https://www.edupac-id.com/wp-content/uploads/2022/11/kuliah-di-italia-1.jpg',
+      'https://www.blibli.com/friends-backend/wp-content/uploads/2023/03/B300136-Cover-Panduan-Wisata-Italia-scaled.jpg',
       ]
     
 
@@ -45,7 +47,7 @@ var CountryM= [
     reting: '6.2',
     imgPlus: 'https://cdn.pixabay.com/photo/2021/06/22/16/39/arch-6356637_640.jpg',
     imgSrc: [
-      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/07/a8/2c/caption.jpg?w=1400&h=1400&s=1',
+      'https://superlive.id/storage/articles/9f1873c6-45fe-4f65-b60d-999423020a2e.jpg',
       'https://www.aptouring.com.au/-/media/apt-responsive-website/europe/hero-panel-12-5/france-12-5/hc-a-eu-france-paris-arc-de-triomphe-end-of-illuminated-champs-elysees-street-114479500-s-12-5.jpg',
     ]
 
@@ -67,7 +69,7 @@ var CountryM= [
     reting: '5.1',
     imgPlus: 'https://www.tagar.id/Asset/uploads/120694-spanyol.jpeg',
     imgSrc: [
-      'https://www.myeducationrepublic.com/wp-content/uploads/2022/06/SPAIN.jpg',
+      'https://keystoneacademic-res.cloudinary.com/image/upload/f_auto/q_auto/g_auto/c_fill/w_1280/element/11/110855_shutterstock_377505535.jpg',
       'https://asset.kompas.com/crops/lun_L3OjBCSgGeOgjDvD_cQBw2E=/0x0:1919x1279/750x500/data/photo/2020/05/11/5eb8f3c7e82f1.jpg'
     ]
 

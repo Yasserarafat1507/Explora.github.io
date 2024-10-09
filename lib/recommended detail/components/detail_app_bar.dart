@@ -1,14 +1,23 @@
+import 'package:dicoding/model/recomended_model.dart';
 import 'package:flutter/material.dart';
 
 class RDetailAppBar extends StatefulWidget {
-  const RDetailAppBar({super.key});
+  final RecomendedModel destination;
+
+  const RDetailAppBar({required this.destination, super.key});
 
   @override
   _RDetailAppBarState createState() => _RDetailAppBarState();
 }
 
 class _RDetailAppBarState extends State<RDetailAppBar> {
-  bool isFavorited = false;
+  late bool isFavorited;
+
+  @override
+  void initState() {
+    super.initState();
+    isFavorited = widget.destination.isFavorited; // Set initial state from model
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +49,7 @@ class _RDetailAppBarState extends State<RDetailAppBar> {
             onTap: () {
               setState(() {
                 isFavorited = !isFavorited;
+                widget.destination.isFavorited = isFavorited; // Update model status
               });
             },
             child: Container(

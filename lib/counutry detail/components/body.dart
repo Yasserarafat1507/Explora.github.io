@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
         backgroundColor: Colors.transparent,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(90), 
-          child: DetailAppBar(),
+          child: DetailAppBar(destination: country,),
           ),
           bottomNavigationBar: DetailBottomBar(country: country,)
       ),

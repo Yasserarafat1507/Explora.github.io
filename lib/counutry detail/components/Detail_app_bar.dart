@@ -1,19 +1,29 @@
+import 'package:dicoding/model/country_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailAppBar extends StatefulWidget {
-  const DetailAppBar({super.key});
+  final PopularModel destination; // Tambahkan parameter model
+
+  const DetailAppBar({required this.destination, super.key});
 
   @override
-  _RDetailAppBarState createState() => _RDetailAppBarState();
+  _DetailAppBarState createState() => _DetailAppBarState();
 }
 
-class _RDetailAppBarState extends State<DetailAppBar> {
-  bool isFavorited = false;
+class _DetailAppBarState extends State<DetailAppBar> {
+  late bool isFavorited; // Status favorit dari model
+
+  @override
+  void initState() {
+    super.initState();
+    // Setel status favorit awal dari model
+    isFavorited = widget.destination.isFavorited;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -22,10 +32,10 @@ class _RDetailAppBarState extends State<DetailAppBar> {
               Navigator.pop(context);
             },
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black26,
                     blurRadius: 6,
@@ -33,21 +43,23 @@ class _RDetailAppBarState extends State<DetailAppBar> {
                 ],
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: Icon(Icons.arrow_back, size: 28),
+              child: const Icon(Icons.arrow_back, size: 28),
             ),
           ),
           InkWell(
             onTap: () {
               setState(() {
+                // Toggle status favorit
                 isFavorited = !isFavorited;
+                widget.destination.isFavorited = isFavorited; // Update model
               });
             },
             child: Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(15),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black26,
                     blurRadius: 6,
