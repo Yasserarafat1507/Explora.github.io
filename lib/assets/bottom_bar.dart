@@ -10,11 +10,27 @@ class BottomBar extends StatelessWidget {
       backgroundColor: Colors.transparent,
       index: 2,
       items: [
-        Icon(Icons.person_outline, size: 30,),
-        Icon(Icons.favorite_outlined, size: 30,),
-        Icon(Icons.home, size: 30, color: Colors.blueAccent,),
-        Icon(Icons.location_on_outlined, size: 30,),
-        Icon(Icons.list, size: 30,),
+        Icon(
+          Icons.person_outline,
+          size: 30,
+        ),
+        Icon(
+          Icons.favorite_outlined,
+          size: 30,
+        ),
+        Icon(
+          Icons.home,
+          size: 30,
+          color: Colors.blueAccent,
+        ),
+        Icon(
+          Icons.location_on_outlined,
+          size: 30,
+        ),
+        Icon(
+          Icons.list,
+          size: 30,
+        ),
       ],
     );
   }
